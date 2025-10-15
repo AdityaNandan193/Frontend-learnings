@@ -1,0 +1,2 @@
+Heading used in html starts from h1 and goes upto h6 so these are not different due to their size actually the difference between them 
+is of importance the H1 carries the highest importance and h6 carries the lowest importance. 
