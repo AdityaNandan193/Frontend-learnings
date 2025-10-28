@@ -85,7 +85,7 @@ The <div> element becomes especially powerful when used with CSS for layout and 
 
 
 HTML FORMS:
----------
+----------
 
 Forms are interactive elements that allow users to input data which can be sent to a server for 
 processing.They're essential for user interaction in web applications.
@@ -96,7 +96,7 @@ processing.They're essential for user interaction in web applications.
    - "action" attribute specifies where to send the form data
    - "method" attribute specifies how to send the data (GET or POST)
 
-2. Form Methods:
+2. Form Methods:is
    - GET: Appends form data to the URL (visible in address bar)
    - POST: Sends form data in the HTTP request body (not visible in URL)
    - GET is for non-sensitive data, POST for sensitive data or larger amounts
@@ -245,3 +245,92 @@ processing.They're essential for user interaction in web applications.
    - Sanitize all user input to prevent XSS (Cross-Site Scripting) attacks
 
 Forms are the primary way users interact with web applications, and properly designed forms improve user experience and data collection efficiency.
+
+
+CONTAINER TAGS IN HTML:
+---------------------
+
+Container tags (structural/block-level elements) are HTML elements that can contain other HTML elements inside them.
+
+Common Container Tags:
+--------------------
+
+1. <div> - Generic container for grouping elements
+Example:
+<div>
+    <h1>Title</h1>
+    <p>Some text</p>
+    <img src="image.jpg">
+</div>
+
+2. <section> - Thematic grouping of content
+Example:
+<section>
+    <h2>About Us</h2>
+    <p>Company information</p>
+</section>
+
+3. <article> - Self-contained content
+Example:
+<article>
+    <h2>Blog Post Title</h2>
+    <p>Blog content...</p>
+</article>
+
+4. <header> - Introductory content or navigation
+Example:
+<header>
+    <h1>Website Name</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+</header>
+
+5. <footer> - Footer section of document/section
+Example:
+<footer>
+    <p>Copyright © 2025</p>
+</footer>
+
+6. <nav> - Navigation links
+Example:
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+</nav>
+
+7. <main> - Main content of the document
+Example:
+<main>
+    <h1>Main Content</h1>
+    <p>Primary content goes here...</p>
+</main>
+
+8. <aside> - Side content/sidebar
+Example:
+<aside>
+    <h3>Related Links</h3>
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+    </ul>
+</aside>
+
+Key Characteristics:
+------------------
+- Can contain other elements
+- Usually start on a new line
+- Take up full width available
+- Can have padding, margin, width, and height
+- Used for layout and structure
+- Help with semantic meaning of content
+- Important for accessibility and SEO
+
+Best Practice:
+------------
+Choose semantic containers (<header>, <nav>, <main>, etc.) when possible instead of generic <div> tags, as they provide more meaning to both browsers and developers about the content's purpose.
