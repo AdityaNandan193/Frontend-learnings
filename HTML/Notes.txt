@@ -334,3 +334,7 @@ Key Characteristics:
 Best Practice:
 ------------
 Choose semantic containers (<header>, <nav>, <main>, etc.) when possible instead of generic <div> tags, as they provide more meaning to both browsers and developers about the content's purpose.
+
+() - parenthesis
+[] - brackets
+{} - braces

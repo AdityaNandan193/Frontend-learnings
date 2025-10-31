@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /* This is universal selector and it is used to select the whole document */
+        /* * {
+            margin : 0;
+            padding : 0;
+            box-sizing : border-box;
+        } */
+
+
+        /* This is type selector and it is used to select the element by its name */
+
+        p{
+            font-size: 16px;
+            margin : 10px 100px 10px 50px;
+            /* margin : top right bottom left */
+            /* margin : 10px(top and bottom) 100px(left and right) */
+            line-height : 1.5;
+            padding: 100px;
+        }
+
+        /* This is class selector and it is used to select the element by its class name */
+        .important{
+            color : red;
+            font-weight : bold;
+        }
+
+        /* This is id selector and it is used to select the element by its id name */
+        #header{
+            background-color: lightblue;
+            padding: 10px;
+            font-size: 24px;
+        }
+
+        /* This is attribute selector and it is used to select the element by its attribute */
+        input[type="text"]{
+            border : 2px dashed green;
+            padding : 5px;
+            font-size : 16px;
+        }
+        /* This is descendant selector and it is used to select the element which is inside another element */
+        article p{
+            color : purple;
+            font-style : italic;
+            font-size: large;
+        }
+
+        /* This is a child selector and it is used to select the element which is a direct child of another element */
+        ul>li{
+            color : orange;     
+            font-weight : bold;
+        }
+        /* This is adjacent sibling selector and it is used to select the element which is immediately after another element */
+        h1 + p{
+            color : blue;
+            font-size : 18px;
+        }
+        /* This is general sibling selector and it is used to select the element which is after another element */
+        h1 ~ p{
+            background-color : lightgrey;
+        }       
+        /* This is a pseudo-class selector and it is used to select the element based on its state */
+        a:hover{
+            color : red;
+            text-decoration : underline;
+            background-color: aliceblue;
+        }
+        /* This is a pseudo-element selector and it is used to select a part of an element */
+        p::first-line{
+            font-weight : bold;
+        }
+        /* This is a grouping selector and it is used to select multiple elements */
+        h1, h2, h3, h4, h5, h6{
+            margin-bottom : 10px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header id = "header"> this is the header </header>
+    <h1>Hi my name is Aditya Nandan</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quas voluptas perspiciatis nam modi iusto suscipit? Impedit aliquam necessitatibus quis, aut corrupti ducimus omnis, voluptatem magni molestias ratione corporis ad.</p>
+    <p class = "important">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quas voluptas perspiciatis nam modi iusto suscipit? Impedit aliquam necessitatibus quis, aut corrupti ducimus omnis, voluptatem magni molestias ratione corporis ad.</p>
+    <label for="name">Name: </label>
+    <input type="text" placeholder="Enter your name">
+    <article>
+        <p>This paragraph is inside an artice , 
+            showing the descendant selector example.
+        </p>
+    </article>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+    </ul>
+    <a href="www.google.com">click here to go to google</a>
+    
+</body>
+</html>
