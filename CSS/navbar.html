@@ -16,11 +16,11 @@
         }
         .nav1 ul{
             list-style-type: none; /* to remove bullet points */
-            display : flex; /* to make it horizontal */
-            gap: 20px; /* to add space between items */
-            padding: 0; /* to remove default padding */ 
-            margin: 0; /* to remove default margin */
-            justify-content: center; /* to center the items */
+            display : flex; /*to make it horizontal*/
+            gap: 20px; /*to add space between items*/
+            padding: 0; /*to remove default padding*/ 
+            margin: 0; /*to remove default margin*/
+            justify-content: center; /*to center the items*/
         }
         .nav1 li {
              display : inline; /* to make it horizontal */
@@ -48,11 +48,98 @@
         }
         .nav1 a::after{  
             /* this is used to apply styles after the link and we have to first give the content */
-            content: "abc"; 
+            content: ""; 
          }
-    
+
+         .nav2{
+            width : 200px;
+            border : 2px solid black;
+            background-color: lightblue;
+            padding : 20px;
+         }
+         .nav2 ul{
+            list-style-type: none; /* to remove bullet points */
+            padding: 0; /* to remove default padding */ 
+            margin: 0px; /* to remove default margin */
+         }
+         .nav2 li {
+             margin-bottom: 15px; /* to add space between items */
+         }
+         .nav2 a{
+            text-decoration: none; /* to remove underline */
+            color: black;
+            font-weight: bold;
+            
+        }
+        .nav2 a:hover {
+            text-decoration: underline; /* to add underline on hover */
+            color: white; /* to change text color on hover */
+            
+        }
+        .nav2 .login-button{
+            background-color: orange;
+            border : none; 
+            margin-top: 10px;
+            padding : 5px 10px;     
+            /* this padding is to give space inside the button and it is 
+            5px top and bottom, 10px left and right */
+            font-weight : bold;
+            width : 100%; /* to make button full width */
+            border-radius: 5px; /* to give rounded corners */
+            cursor : pointer; /*  this is to change cursor to pointer on hover */
+        }
+        .nav2 .login-button:hover {
+            background-color: red; /* to change background color on hover */
+            color: white; /* to change text color on hover */
+            transform: scale(1.05); /* to scale the button on hover */
+            border: 2px solid black; /* to add border on hover */
+        }
+        
+        .nav3{
+            background-color: lightyellow;
+            
+        }
+        .nav3 ul{
+            display : flex; /* to make it horizontal */
+            justify-content: center; /* to center the items */
+            list-style-type: none; /* to remove bullet points */
+            gap: 20px; /* to add space between items */
+        }
+        .nav3 a{
+            text-decoration: none; /* to remove underline */
+            color: black;
+            font-weight: bold;
+            padding : 5px 10px;   
+        }
+        .nav3 a:hover{
+            background-color: lightcoral; /* to change background color on hover */
+            border-radius: 5px; /* to give rounded corners on hover */
+            color : white; /* to change text color on hover */
+        }
+        .dropdown .dropdown-content {
+            display: none; /* to hide the dropdown content */
+            position: absolute; /* to position it absolutely */
+            /* This absolute positioning allows the dropdown to appear over other content */
+            background-color: lightgray;
+            min-width: 100px; /* to set minimum width */
+
+        }
+        .dropdown:hover .dropdown-content {
+            display: block; /* to show the dropdown content on hover */
+        }
+        .dropdown-content a {
+            color: black;
+            padding: 10px 15px;
+            text-decoration: none;
+            display : block; /* to make it block level */
+        }
+        .dropdown-content a:hover {
+            background-color: gray; /* to change background color on hover */
+            color: white; /* to change texth color on hover */
+        }
+
     </style>
-    
+
 </head>
 <body>
      <div class = "nav-container">
@@ -73,7 +160,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Product</a></li>
-                <li><button>Login</button></li>
+                <li><button class = "login-button">Login</button></li>
             </ul>
         </nav>
         </div>
@@ -82,10 +169,18 @@
             <nav class = "nav3">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
+                    <li class = "dropdown"><a href="#">About</a>
+                    <div class = "dropdown-content">
+                            <a href="#">Our Story</a>
+                            <a href="#">Team</a>
+                            <a href="#">Contact</a>
+                    </div>
+                    </li>
                     <li><a href="#">Product</a></li>
-                    <li><button>Login</button></li>
+                    <li><button class = "login-button">Login</button></li>
+                    
                 </ul>
+
             </nav>
         </div>
 
