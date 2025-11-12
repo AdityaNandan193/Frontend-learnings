@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>everything on grids</title>
+    <style>
+        .box{
+            margin : 10px;
+            border : 2px solid black;
+            padding : 10px;
+            background-color : lightgrey;
+            text-align: center;
+        }
+        .grid-container {
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(3,100px);
+            display : grid;
+            gap : 6px;
+        }
+        .item{
+            border : 5px solid black;
+            background-color : lightblue;
+            padding : 20px;
+            font-size : 30px;
+            color : black;
+        }
+        
+        .item:nth-child(even) {
+            background-color: red;
+            color: white; /* Makes text more readable on red background */
+        }
+    </style>
+</head>
+<body>
+    <h1>everything on grids</h1>
+    <div class = "box">
+        <h2>Basic Grid (3 X 3)</h2>
+        <div class = "grid-container">
+            <div class = "item item-1">1</div>
+            <div class = "item item-2">2</div>
+            <div class = "item item-3">3</div>
+            <div class = "item item-4">4</div>
+            <div class = "item item-5">5</div>
+            <div class = "item item-6">6</div>
+            <div class = "item item-7">7</div>
+            <div class = "item item-8">8</div>
+            <div class = "item item-9">9</div>
+        </div>
+    </div>
+    <div class = "box">
+        <h2>Grid with different column sizes</h2>
+        <div style = "grid-template-columns: 1fr 2fr 1fr; grid-template-rows: 100px; display: grid; gap:2px;">
+            <div class = "item">1</div>
+            <div class = "item">2</div>
+            <div class = "item">3</div>
+        </div>
+    </div>
+    <div class = "box">
+        <h2>Grid item placement</h2>
+        <div style = "display :grid; grid-template-columns: repeat(3,1fr); gap:2px; grid-template-rows: repeat(2,100px);">
+            <div class = "item" style = "grid-column : 1/3; grid-row : 1/3">1</div>
+            <div class = "item">2</div>
+            <div class = "item">3</div>
+            <div class = "item">4</div>
+            <div class = "item" style = "grid-column :2/4">5</div>     
+        </div>
+    </div>
+    <div class = "box">
+        <h2>Grid template areas</h2>
+        <div style = "display:grid; gap :2px; grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';">
+        <div class = "item" style = "grid-area: header;">Header</div>
+        <div class = "item" style = "grid-area: sidebar;">Sidebar</div>
+        <div class = "item" style = "grid-area: main;">Main Content</div>
+        <div class = "item" style = "grid-area: footer;">Footer</div>
+        </div>
+    </div>
+
+    <!-- so here we have a grid with defined areas which makes it easy to manage layout
+    and header is written three which means it will take up three columns in the grid -->
+
+    <div class = "box">
+        <h2>Autofit and minmax</h2>
+        <div style = "display: grid;gap: 2px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));">
+        <div class ="item">1</div>
+        <div class ="item">2</div>
+        <div class ="item">3</div>
+        <div class ="item">4</div>
+        <div class ="item">5</div>
+        <div class ="item">6</div>
+        </div>
+        
+    </div>">
+
+    </div>
+</body>
+</html>
