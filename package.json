@@ -1,0 +1,17 @@
+{
+  "name": "frontend-learnings",
+  "version": "1.0.0",
+  "description": "some shortcut keys  1. ctrl+shift+p -> for opening the command pallete 2. ctrl + ~ -> for opening the terminal  3. ctrl + b -> for opening the file explore section",
+  "main": "index.js",
+  "type" : "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18"
+  }
+}
